@@ -1,0 +1,41 @@
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: fieldName, value: label}
+    - {method: equals, name: type, value: JLabel}
+    generalProperties:
+    - {name: fieldName, value: label}
+    - {name: labelText, value: 'lbl:0'}
+    - {name: component.class.simpleName, value: JLabel}
+    - {name: type, value: JLabel}
+    - {name: enabled, value: 'true'}
+    - {name: indexOfType, value: '0'}
+    - {name: instanceOf, value: javax.swing.JLabel}
+    - {name: component.class.name, value: javax.swing.JLabel}
+    - {name: cText, value: '0'}
+    - {name: layoutData.y, value: '0.0'}
+    - {name: layoutData.x, value: '0.0'}
+    - {name: accessibleContext.accessibleName, value: '0'}
+    - {name: size, value: '[width=246,height=36]'}
+    - {name: accessibleName, value: '0'}
+    - {name: position, value: '[x=488,y=478]'}
+    name: lbl:0
+- !!net.sourceforge.marathon.objectmap.OMapComponent
+    componentRecognitionProperties:
+    - {method: equals, name: fieldName, value: button}
+    - {method: equals, name: type, value: JButton}
+    generalProperties:
+    - {name: fieldName, value: button}
+    - {name: component.class.simpleName, value: JButton}
+    - {name: type, value: JButton}
+    - {name: enabled, value: 'true'}
+    - {name: indexOfType, value: '0'}
+    - {name: instanceOf, value: javax.swing.JButton}
+    - {name: actionCommand, value: Start}
+    - {name: component.class.name, value: javax.swing.JButton}
+    - {name: buttonText, value: Start}
+    - {name: cText, value: Start}
+    - {name: accessibleContext.accessibleName, value: Start}
+    - {name: size, value: '[width=246,height=25]'}
+    - {name: accessibleName, value: Start}
+    - {name: position, value: '[x=488,y=550]'}
+    name: Start

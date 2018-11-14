@@ -1,0 +1,27 @@
+#Marathon Project File
+#Wed Nov 14 16:52:39 EET 2018
+marathon.checklist.dir=%marathon.project.dir%/Checklists
+marathon.test.dir=%marathon.project.dir%/TestCases
+marathon.application.launchtime=60000
+marathon.application.pythonpath=
+marathon.runtime.assertions=Enabled\:\:;Background\:\:;Foreground\:\:;RowCount\:javax.swing.JTable\:;ColumnCount\:javax.swing.JTable\:;ItemCount\:javax.swing.JComboBox\:;Model.Size\:javax.swing.JList\:ItemCount;Font\:\:;Font.Family\:\:FontFamily;Border\:\:;Border.LineColor\:\:BorderLineColor
+marathon.data.dir=%marathon.project.dir%/TestData
+marathon.component.ignore.components=javax.swing.JMenuBar(ignorechild\:false);javax.swing.JToolBar(ignorechild\:false);javax.swing.JPanel(ignorechild\:false);javax.swing.JViewport(ignorechild\:false);javax.swing.JScrollBar(ignorechild\:true)
+marathon.application.classpath=%marathon.project.dir%/../GuiTest
+marathon.application.arguments=
+marathon.application.working.dir=/home/student/GuiTest
+marathon.properties.java.util.logging.config.file=%marathon.project.dir%/logging.properties
+marathon.capture.dir=%marathon.project.dir%/Modules
+marathon.project.launcher.model=net.sourceforge.marathon.runtime.RuntimeLauncherModel
+marathon.application.mainclass=p14.MainFrame
+marathon.application.pythonhome=
+marathon.recorder.namingstrategy=net.sourceforge.marathon.objectmap.ObjectMapNamingStrategy
+marathon.fixture.dir=%marathon.project.dir%/Fixtures
+marathon.component.resolvers=
+marathon.application.toolkit_menumask=false
+marathon.project.description=
+marathon.application.vm.command=
+marathon.project.name=GuiTest
+marathon.suite.dir=%marathon.project.dir%/TestSuites
+marathon.project.script.model=net.sourceforge.marathon.python.PythonScriptModel
+marathon.application.vm.arguments=

@@ -1,0 +1,364 @@
+Marathon Version 5.2.2.0 (16th July 2018)
+
+01. feat: Added JavaDoc for JavaDriver and JavaProfile
+02. chore: Formatted all code using eclipse
+03. fix: Java9/Java10 Compatibility Issues
+04. chore: Enhanced FileChooserSample
+05. fixed: Updated javassist version to 3.23.1
+
+commit 2585c892ea04ab5cc7c5771f6e7c9816a498b81d
+Merge: 62e0465a 8ddb52d5
+Author: Dakshinamurthy Karra <dakshinamurthy.karra@jaliansystems.com>
+Date:   Tue Jul 3 12:13:00 2018 +0530
+
+    Merge branch 'release/v5.2.1.0' into develop
+Marathon Version 5.2.1.0 (3rd July 2018)
+
+01. feat: Sorting the test classes in components.Main - test helper
+02. fixed: JTable, JTree and JList recording doubleclick twice
+03. fixed: Error when calling window.name (Who is calling?)
+04. fixed: Using last resort naming properties - regression
+05. fix: findNamingProperties unable to resolve javafx.scene.Node class.
+06. fixed: Calls in @Before methods are being recorded
+
+Marathon Version 5.2.0.0 (26th June 2018)
+
+01. refact: Upgrade selenium to 3.12
+02. feat: Use short names for agent JARS. This frees up space for JAVA_TOOL_OPTIONS
+03. fix: Ignore recording for events generated while playing a script
+04. fixed: Added a RTE when JAVA_TOOL_OPTIONS > 1023 bytes
+05. JXBrowserView retry loadscript
+
+Marathon Version 5.1.9.0 (17th April 2018)
+
+01. feat: Adding screen_shot() method
+02. fix: Using MARATHON_HOME for finding agent/recorder JARS
+03. fix: requestFocus() checks for EDT. Speeds some tests in some cases.
+04. feat: wait_p/assert_p accepts a regex for the expected value
+05. fix: Rare cases where the AUT doesn't start while recording with Wait for recording window shown.
+06. fix: JavaFX window_state_with_title
+07. feat: Wait added waitWithoutException method
+08. fix: Made suffix as a parameter to getScriptCodeForGenericAction
+09. fix: accidental nulling omap file
+10. feat: Added WaitUtil
+11. fix: Create omap folder if it doesn't exist (fixes an NPE)
+12. feat: Added insertScriptStart and insertScriptFinish calls to recording protocol
+13. fix: ComponentId accept Object for WebElement instead of RubyObject
+14. refactor: Marathon Core Base project for use with eclipse
+15. refact: Removed dependency on NamingStrategyFactory in WSRecordingServer
+16. feat: Gradle upgraded to 4.6
+17. fixed: warnings in eclipse with gradle 4.6
+18. feat: Added getObjectMapConfiguration to IObjectMapService
+19. fix: allProperties use a empty hash when not set.
+20. fix: Added setFramework to Constants to override finding from the launcher Models
+
+Marathon Version 5.1.8.0 (12th February 2018)
+
+01. feat: The System property marathon.COMPONENT_WAIT_MS is used for socket read timeout.
+02. fixed: System property for recording JAR in error message
+03. fixed: Added abortApplication to recorder
+
+Marathon Version 5.1.7.0 (23rd January 2018)
+
+01. fix: JavaDriverCommandExecutor - fixed issues with failures
+02. feat: Added a count-up timer to WaitMessageDialog
+03. feat: Added stop recording and play buttons and enabled them during pause
+04. feat: Added support for JxBrowser through an extension
+05. feat: Added support for recording and playback for WebView
+06. fix: scripts changed to use -cp and add UserLibs folder
+07. fixed: Failure to open an editor while starting up should be ignored and DisplayWindow should be shown
+08. feat: Added jenkins plugin
+09. fixed: Ignore inserting scripts while recording - JxBrowser
+
+Marathon Version 5.1.5.0 (27th November 2017)
+
+01. feat: Added nolocalcopy option for WebStartLaunch mode
+02. feat: Added httpd server to open reports from HTMLView editor
+03. feat: Added simple-web-server command to view Allure reports in all browsers.
+04. fix: Main split into GUIMain and Main for handling -batch mode properly
+05. fix: Help message
+06. feat: Added skipreports to skip allure report generation
+07. fix: Added to_s to value param of select, wait_p and assert_p
+08. fix: Removed unused Guice Injector in MarathonTestCase
+09. fix: Use Event.CTRL and Event.META directly for menu mask
+10. fix: AllureMarathonRunListener - Use TestAttributes always to get test properties
+11. fix: Added getIconAsText() to FXUIUtils
+12. fix: Added MessageBar to DisplayWindow
+13. fix: Exception CNF on SeparatorAction in WebApp testing.
+14. fix: Accepting WebElement as parameter to select/click etc.
+15. fix: When a String is passed to switchTo().window() instead of JSON Object handle it.
+16. fix: GetFocusedWindow - put more efforts to give back correct one.
+17. fix: timeout usage in with_window
+18. fix: JavaVersion check not checking properly.
+19. fix: Script execution on FX application thread.
+20. feat: Added setJNLPUrl for JavaProfile.
+21. feat: Blurb - accepts html string as StringBuilder
+22. fix: JRuby upgraded to latest version.
+23. feat: Added nThreads - used by marathonite-grid
+24. fix: Using MarathonTestProvider
+25. fix: MarathonTestProvider moved to marathon.
+26. fix: MarathonTestCase #getName appending name suffix (DDT test cases).
+
+Marathon Version 5.1.4.0 (9th October 2017)
+
+01. fix: Java/FX Agent - Stage#showAndWait hanging in EventQueue.waitTillAllEventsAreComplete
+02. fix: load default values in Marathon preferences stage.
+03. fix: webdriver#quit being called from both webdriver runtime and script.
+04. fix: when a module which has raw recoding clicks is inserted, the recorder is not paused.
+05. fix: stop recording if the controller window is closed.
+06. feat: Add preferencechangelistener for `all` sections. Required for browser reset when browser configuration is modified.
+07. fix: JavaServer creates only a single session and returns the same for all createSession() calls (Java/FX).
+08. fix: FormPane - warning message changed to info
+09. fix: stop recording if the controller window is closed.
+10. fix: JavaServer creates only a single session and returns the same for all createSession() calls (Java/Swing).
+11. fix: setting previous directory for browse handler for Java command line launcher panel.
+12. feat: MarathonRuby - added a method to get capabilities set by user as a RubyHash
+13. fix: Added IWebBrowserProxy to handle browser specific settings
+14. refactor: IWebDriverProxy
+15. fix: Added force option to IWebDriverProxy#quit
+16. fix: JavaFX Full Screenshot
+17. fix: Preferences refactoring to use with Browsers
+18. fix: Not allowing testsuite editor to add or drop testsuites
+19. fix: Refactored toolbar's splitmenu button to remove unwanted items.
+20. fix: Insert checklist on untitled test file, removed stack trace printing for FileNotFoundException.
+21. fix: Adding filters for command browser's file chooser of launchers.
+22. fix: File open with system editor fixed.
+23. fix: Error messages while showing readme/index.html.
+24. fix: EditorReresh(menu item) mnemonic change to Shortcut+F5.
+25. fix: Invalid error message, for invalid project folder in batch mode.
+26. fix: Invalid links in welcome message fixed.
+27. feat: Updated Selenium version
+28. feat: Updated ruby webdriver version
+29. fix: Module dir delete and update.
+30. fix: While playing test case, not checking for object map dirty(play,slow play and debug).
+31. fix: editor not set to dirty when extracted.
+32. fix: in navigator panel -paste context menu is disbled if the clipbord has no files to paste.
+33. fix: in navigator panel, when clipboard item is pasted, it is pasted to selected item's parent folder, if selected item is a folder.
+34. fix: context menu is disabled if no tree item is selected
+35. fix: 'Open with' context menu for the folders in navigator panel is disabled.
+36. fix: rename of file in navigator panel is not giving warning if file name already exists.
+37. fix: when copy or cut menu item is clicked, context menu is not refreshed.
+38. fix: grid for JAVA/FX.
+39. fix: play context menuitem enable and disable for multiple item selection #NavigatorPanel.
+40. fix: Module directory delete update.
+41. fix: All button bars to ButtonBarX for providing ButtonBar complete visibility in all panels.
+
+Marathon Version 5.1.3.0 (7th September 2017)
+1. fix: Down/Up/Left/Right keys causing issues due to KP_ bindings.
+2. fix: v3compatibility where column names are recorded as 'A', 'B' etc.
+3. fix: get_frames and get_frameobjects methods modified.
+
+Marathon Version 5.1.2.0 (4th September 2017)
+1.  fix: TextAreaOutputPane - add text only at EOL
+2.  fix: Added showInvisibles option to ace editor
+3.  fix: Added stopPlay button to UI
+4.  fix: Backward compatibility for internal frame
+5.  fix: with_window recording/playing is made compatible with V3
+6.  fix: Button bar alignment in AceEditorPreferencesStage.
+7.  fix: Created a new class ButtonBarX to fix the button bar alignment in ProjectSelection stage.
+8.  fix: Editors not closed when folder containing editor file is deleted.
+9.  fix: NPE when group editor is refreshed(test case deleted).
+10. fix : Padding for error label and set prefferd column count for text field in MarathonInputStage.
+11. fix: Navigator root name update after updating in Project Settings at DisplayWindow.
+12. fix: 'Welcome to marathon' link redirecting to top in #index.html
+13. fix: remove button enable and disable based on selection index in #UnSavedHistoryStage
+14. feat: tooltip for done button.
+15. fix: SocketError exceptions from JavaServer cleared (FX/Swing)
+16. feat: ScriptConsole a last ';' acts as if we pressed Shift+Enter
+17. fix: ScriptConsole focus on textfield
+18. fix: ScriptConsole change System.out to point to text area
+
+Marathon Version 5.1.1.0 (31st July 2017)
+1. fix: Added ruby helper commands
+2. chore: Added create and modifed time for OMapComponent and OMapContainer.
+3. fix: A regression of parsing a profile URL
+4. fix: AnnotateScreenCapture stage made to take less space.
+5. fix: components #markEntryNeeded not set to true when recording using RemoteObjectMap server.
+6. fix: While recording more than one component matched in omap even if one of them uses last resort properties.
+
+Marathon Version 5.1.0.0 (5th July 2017)
+1.  fix: You can select 'No Launcher' when creating a project.
+2.  fix: FX/DatePicker recording values which has not changed on focuslost.
+3.  fix: Added Java version check. Marathon checks for the minimal required version now.
+4.  fix: AceEditor - not resetting the undo manager, so that undo is active always.
+5.  fix: When assertion window is opened (FX) - record the last select as focus is lost.
+6.  fix: When no items are selected, disable the insert buttons in Assertion window.
+7.  fix: Scroll view for treetableview
+8.  fix: Added support for FX Tab Close opeartion
+9.  fix: TableView waiting till cells been populated.
+10. fix: Scrolling to list cell before getting the pseudo element.
+11. feat: Select fixture on doubleclick from Fixture selection dialog.
+12. fix: Added waitTillEventsProcessed - waits for all runnables to Platform.runLater are processed
+13. fix: Unneeded tree.expandPath removed in JTreeJavaElement. This was causing a select() to expand the tree also.
+14. fix: getText() for progressbar and slider
+15. fix: getList() getText() returns items text for assertion
+16. fix: isVisible() on JavaElement ignore the window while traversing the hierarchy.
+17. feat: Support to record click on JList, JTree and JTable, before recording a select.
+18. feat: Support for TableView and TreeTableView record.
+19. fix: Overridding #click  to pass #target and #pickresult
+20. feat: Modified IDevice and IJavaFXElement #click method to pass #eventtarget and #pickresult
+21. fix: Added missing stubs for refresh_if_stale
+22. fix: Setting marathon.project.dir for java agents.
+23. fix: RFXListView#getCellAt() retrieving all cells belonging to other views also. Has an issue with ComboBoxListCell.
+24. fix: Scrolling in application thread waits for the getPseudoComponent to return. Returning empty array to retry.
+25. fix: Fixed support for ListView to support Ensemble8
+26. fix: Using toggle button for raw recording
+27. fix: NPE in WSRecordingServer window_state
+28. fix: ClassCastException loading assertions @ RubyScript
+
+Marathon Version 5.0.9.0 (20th April 2017)
+1. fix: OOM when the output console overflows.
+2. feat: Added default logging.properties
+3. feat: Added wordwrap option for output console.
+
+Marathon Version 5.0.8.0 (17th April 2017)
+1. fix: Made webdriver log generation optional. Causing OOM errors with
+   screencapture.
+
+Marathon Version 5.0.7.0 (12th April 2017)
+1. fix: marathon-grid enable javascriptexecutor option
+2. fix: UserLibs add an empty JAR so that allure report generation works
+
+Marathon Version 5.0.6.0 (7th April 2017)
+1. fix: Regression - processing of ruby stacktrace
+
+Marathon Version 5.0.5.0 (March 31 2017)
+1. fix: save_screenshot takes a full screen capture instead of top level
+   window.
+2. fix: Showing a warning not to select no launcher for application type when
+   creating a project.
+3. feat: Added selected-tab pseudo class to JTabbedPane
+4. feat: Added tab-component pseudo class to JTabbedPaneTab
+5. fix: creating empty fixture file.
+6. fix: new editor open when omap file is deleted.
+
+Marathon Version 5.0.4.0 (March 10 2017)
+1. feat: Added set_component_wait_ms. Sets the component wait time
+   and updated driver.implicit_wait if supported
+2. fix: (FX) getText based on index, row and column for composite node.
+3. fix: (FX) passing null point to RFXComponents.
+
+Marathon Version 5.0.3.0 (March 7 2017)
+1. fix: with_window() recording only title. Added support for name.
+2. feat: Marathon extensions support fixed. Now a class can be named
+   ending with MarathonExtension instead of name being MarathonExtension.
+3. fix: asserting collection without get and map.
+4. fix: tabpane recording the same tab selected previously.
+5. fix: invisible node are being returned by css
+6. feat: Added a Bare launcher, a fixture that doesn't start a AUT
+
+Marathon Version 5.0.2.0 (March 1 2017)
+1. fix: Invisible components are being returned by CSS (Swing)
+2. fix: Accessing Collections (without a get) and Map (Swing)
+3. chore: Changed default theme to marathon
+4. fix: Unix shell script(?)
+
+Marathon Version 5.0.1.0 (February 28 2017)
+1.  fix: focusedWindow being called with a container = null
+2.  feat: reuse fixture for web application.
+3.  feat: to record and playback Java/AWT FileDialog window.
+4.  feat: Creating driver service in their respective web driver proxy
+    class, so that driverservice is not executed multiple times.
+5.  fix: Ruby runtime engine loading multiple times in some cases
+    where it is not needed.
+6.  fix: encoding property while assertion to avoid invalid URI
+    errors.
+7.  fix: assertion of element from an array - recording improper.
+8.  fix: show failures in test runner.
+9.  fix: Changing console code page to 65001 (UTF8)
+10. fix: caret position change when file is saved.
+11. fix: Updating editor name which is not set to current editor.
+11. fix: Rename not changing editor name
+12. fix: scriptconsole wasn't waiting till the command is
+    executed.
+13. feat: iconify screencapture. When using screencapture, the
+    window is iconified so that it doesn't overlap the captured
+		image.
+14. fix: JavaFXColoPicker firing action event after set the value.
+15. fix: while editing file name, text field's text was not proper in navigator view.
+16. fix: application modality to script console
+17. fix: tagname while recording htmleditor.
+18. fix: Changing only the case of a filename not working on
+    Mac/Windows where file names are not case sensitive.
+19. fix: name, description, seveity and id inside double quotes in test file.
+20. feat: Added info menu to testscripts
+21. fix: unable to access properties accessible by V3
+    Not setting accessible flag in EventQueueWait#call doesn't allow accessing
+    objects of anonymouse class objects.
+22. fix: setting window state for restoring when relaunched.
+
+Marathon Version 5.0 (December 15 2016)
+
+1. UI has been rewritten to use Java/FX
+2. feat: Grouping of test cases in features, stories and issues
+3. feat: TestCase meta data TestID and linking to external system
+4. feat: Allure reporting framework integrated
+
+Marathon Version 4.2.2.0 (September 12 2016)
+
+1. Fixed: indexOfType() using type, but URP recorded using tag-name.
+2. Fixed: getTitle() returns first available label text if title is empty.
+
+Marathon Version 4.2.1.0 (June 30 2016)
+
+1. Fixed: execute_script printing the output instead of returning.
+2. Chore: get_title returns nil if there is no focused window.
+
+Marathon Version 4.2.0.0 (Apr 11 2016)
+
+1. Single application to support both Java/Swing and Java/FX.
+2. Added execute_script method.
+   execute_script takes a list of strings and executes the command
+   on the VM executing the AUT.
+3. Added example Marathon projects.
+   For Swing we use SwingSet3 and FX we use Ensemble.
+4. Updated getTitle() to return the currently focused window title.
+5. Support for reloading ruby if a module changes
+   When a module or a fixture file changes, Ruby interpreter is reloaded
+   so that the changes are visible.
+5. Error message for non-editable tree nodes.
+   When a select() is called on a non-editable tree node, a proper error
+   message is shown.
+6. Added select-by-properties to JTabbedPane.
+   With this you can get a tab using get_component(<tabbedpane>, <tabname>)
+7. Using sendKeys() on text#select call.
+8. Ctrl+C is being sent as Ctrl+Shift+C
+9. Show relative file name in window title.
+10. Expand treepath for selected node.
+    When a treenode is selected, we expand the node also.
+11. Send keytyped events for SPACE/ENTER
+12. Using differnt D&D Copy key on windows.
+13. Using UTF8 for compiling Java sources.
+14. execute_script - toString() on return value
+    driver.execute_script was returning null when the return value is not one of
+    the known data types. We do a Object#toString() on it now.
+15. Selecting first row in tableView. (FX)
+    We were using selectIndices() which considers 0 as invalid value.
+16. fix: Using UTF8 for compiling Java sources.
+    Some of the test helper methods use UTF8 characters and do not compile
+    when the encoding is not set.
+
+Marathon Version 4.1.2.0 (Apr 11 2016)
+
+1. Added support for JavaFX
+2. You require JDK7 to run Marathon
+4. FX uses a different omap configuration.
+5. Added focus events before actions on a component
+6. Added marathon.logevents property and logging of events
+7. Invalid x,w,y,h values for display window defaults to full screen
+
+Marathon Version 4.0.1.0 (Feb 17 2016)
+
+1. Adding support for missing methods in playback.rb
+	drag, drag_and_drop, assert_true, assert_false, fail, error, get_named_components, get_component_names
+	file_equals, image_compare, get_window, get_window_object, get_p, get_po
+2. Fixed: JListJavaElement: added select-by-properties
+3. Fixed: Setting the DnDKey depending on the platform.
+4. Added log for exceptions
+5. Fixed NPE in agent
+6. Fixed: inserting module method not executing the method content
+7. Fixed: Showing only valid module methods while inserting by implementing topWindowId to recording server and client.
+
+Marathon Version 4.0.0.0 (Feb 2 2016)
+
+1. Initial 4.0 release
